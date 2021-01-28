@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Container } from "@material-ui/core";
+
+import Header from "./components/Header/Header";
 import Movies from "./components/Movies/Movies";
 import People from "./components/People/People";
 import Planets from "./components/Planets/Planets";
@@ -19,12 +22,12 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <h1>Star Wars</h1>
+    <Container maxwidth="lg" className="root">
+      <Header pageTitle="Explorer" />
       <Movies />
       <People />
       <Planets />
-    </>
+    </Container>
   );
 };
 
