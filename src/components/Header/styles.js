@@ -1,14 +1,17 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
   appBar: {
     borderRadius: 10,
-    backgroundColor: "rgba(0,0,0,0)",
+    backgroundColor: 'rgba(0,0,0,0)',
   },
   headingTitle: {
-    display: "flex",
-    justifyContent: "center",
-    margin: "30px",
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '30px',
     letterSpacing: 4,
+  },
+  menuButton: {
+    color: '000',
   },
 }));
