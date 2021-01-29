@@ -26,11 +26,11 @@ const PlanetCard = ({ planet: { name, terrain, population } }) => {
       <List className={classes.root}>
         <ListItem>
           <ListItemAvatar>
-            <Avatar className={classes.avatar}>
+            <Avatar className={`${classes.avatar} ${classes.name}`}>
               <PublicIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={`Name: ${name}`} />
+          <h2 className={classes.name}>{`Name: ${name}`}</h2>
         </ListItem>
         <Divider variant="inset" component="li" />
         <ListItem>

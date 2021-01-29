@@ -39,4 +39,7 @@ export default makeStyles({
     color: '#fff',
     backgroundColor: 'rgb(40, 40, 40)',
   },
+  name: {
+    color: '#fff8bc',
+  },
 });
