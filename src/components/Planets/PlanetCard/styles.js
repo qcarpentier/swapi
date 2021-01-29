@@ -35,4 +35,8 @@ export default makeStyles({
     textDecoration: 'none',
     color: 'inherit',
   },
+  avatar: {
+    color: '#fff',
+    backgroundColor: 'rgb(40, 40, 40)',
+  },
 });

@@ -14,6 +14,8 @@ const People = () => {
   const classes = useStyles();
   const people = useSelector((state) => state.people);
 
+  console.log(people);
+
   return !people.length ? (
     <CircularProgress />
   ) : (
@@ -29,8 +31,8 @@ const People = () => {
                     : character.url.slice(-4)
                 }
                 item
-                xs={6}
-                sm={3}
+                xs={12}
+                sm={6}
               >
                 <CharacterCard character={character} />
               </Grid>

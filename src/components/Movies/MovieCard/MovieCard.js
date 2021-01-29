@@ -7,8 +7,6 @@ import useStyles from './styles';
 const MovieCard = ({ movie: { title, episode_id } }) => {
   const classes = useStyles();
 
-  console.log(title);
-
   return (
     <Card className={classes.card}>
       <Link to={`movies/${episode_id}`} className={classes.link}>

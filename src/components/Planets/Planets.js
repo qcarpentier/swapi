@@ -29,10 +29,10 @@ const Planets = () => {
                     : planet.url.slice(-4)
                 }
                 item
-                xs={6}
-                sm={3}
+                xs={12}
+                sm={6}
               >
-                <PlanetCard name={planet.name} url={planet.url} />
+                <PlanetCard planet={planet} />
               </Grid>
             ))}
           </Grid>
