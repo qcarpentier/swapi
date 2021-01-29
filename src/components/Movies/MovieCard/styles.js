@@ -1,12 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles({
-  border: {
-    border: 'solid',
-  },
-  fullHeightCard: {
-    height: '100%',
-  },
   card: {
     display: 'flex',
     color: '#fff',
@@ -21,9 +15,6 @@ export default makeStyles({
     '&:hover': {
       backgroundColor: 'rgb(70, 70, 70)',
     },
-  },
-  grid: {
-    display: 'flex',
   },
   title: {
     display: 'flex',

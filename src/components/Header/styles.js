@@ -11,9 +11,6 @@ export default makeStyles(() => ({
     margin: 'auto',
     padding: '30px',
   },
-  menuButton: {
-    color: '000',
-  },
   link: {
     textDecoration: 'none',
     color: 'inherit',

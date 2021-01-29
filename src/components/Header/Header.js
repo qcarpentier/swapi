@@ -28,61 +28,63 @@ const Header = ({ pageTitle, setPageTitle }) => {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar className={classes.appBar} position="static">
-        <Link to="/">
-          <img src={logo} className={classes.img} />
-        </Link>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="menu"
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
+    <AppBar className={classes.appBar} position="static">
+      <Link to="/">
+        <img
+          src={logo}
+          className={classes.img}
+          alt="Star Wars logo"
+        />
+      </Link>
+      <Toolbar>
+        <IconButton
+          color="inherit"
+          aria-label="menu"
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleClick}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h4">{pageTitle}</Typography>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <Link
+            to="/"
+            onClick={() => setPageTitle('Explorer')}
+            className={classes.link}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h4">{pageTitle}</Typography>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
+            <MenuItem onClick={handleClose}>Explorer</MenuItem>
+          </Link>
+          <Link
+            to="/movies"
+            onClick={() => setPageTitle('Movies')}
+            className={classes.link}
           >
-            <Link
-              to="/"
-              onClick={() => setPageTitle('Explorer')}
-              className={classes.link}
-            >
-              <MenuItem onClick={handleClose}>Explorer</MenuItem>
-            </Link>
-            <Link
-              to="/movies"
-              onClick={() => setPageTitle('Movies')}
-              className={classes.link}
-            >
-              <MenuItem onClick={handleClose}>Movies</MenuItem>
-            </Link>
-            <Link
-              to="/people"
-              onClick={() => setPageTitle('People')}
-              className={classes.link}
-            >
-              <MenuItem onClick={handleClose}>People</MenuItem>
-            </Link>
-            <Link
-              to="/planets"
-              onClick={() => setPageTitle('Planets')}
-              className={classes.link}
-            >
-              <MenuItem onClick={handleClose}>Planets</MenuItem>
-            </Link>
-          </Menu>
-        </Toolbar>
-      </AppBar>
-    </div>
+            <MenuItem onClick={handleClose}>Movies</MenuItem>
+          </Link>
+          <Link
+            to="/people"
+            onClick={() => setPageTitle('People')}
+            className={classes.link}
+          >
+            <MenuItem onClick={handleClose}>People</MenuItem>
+          </Link>
+          <Link
+            to="/planets"
+            onClick={() => setPageTitle('Planets')}
+            className={classes.link}
+          >
+            <MenuItem onClick={handleClose}>Planets</MenuItem>
+          </Link>
+        </Menu>
+      </Toolbar>
+    </AppBar>
   );
 };
 

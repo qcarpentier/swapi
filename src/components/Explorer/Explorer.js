@@ -32,7 +32,7 @@ const Explorer = ({ setPageTitle }) => {
   // Set "Explorer" as default page title
   useEffect(() => {
     setPageTitle('Explorer');
-  }, []);
+  }, [setPageTitle]);
 
   return (
     <>

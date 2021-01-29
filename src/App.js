@@ -16,10 +16,8 @@ import {
 import { useDispatch } from 'react-redux';
 
 import { getMovies, getPeople, getPlanets } from './actions';
-import useStyles from './styles';
 
 const App = () => {
-  const classes = useStyles();
   const dispatch = useDispatch();
 
   const [pageTitle, setPageTitle] = useState('Explorer');
