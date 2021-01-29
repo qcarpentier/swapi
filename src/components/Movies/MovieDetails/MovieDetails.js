@@ -25,7 +25,7 @@ const MovieDetails = ({ movies }) => {
   const { movieId } = useParams();
 
   const currentMovie = movies.find(
-    (movie) => movie.episode_id === movieId,
+    (movie) => movie.episode_id == movieId,
   );
 
   return !currentMovie ? (
