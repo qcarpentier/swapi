@@ -5,11 +5,11 @@ export default makeStyles(() => ({
     borderRadius: 10,
     backgroundColor: 'rgba(0,0,0,0)',
   },
-  headingTitle: {
+  img: {
+    width: '25%',
     display: 'flex',
-    justifyContent: 'center',
-    margin: '30px',
-    letterSpacing: 4,
+    margin: 'auto',
+    padding: '30px',
   },
   menuButton: {
     color: '000',

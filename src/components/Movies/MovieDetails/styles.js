@@ -5,6 +5,9 @@ export default makeStyles(() => ({
     width: '50%',
     margin: 'auto',
     backgroundColor: 'rgb(45, 45, 45)',
+    borderRadius: '5px',
+    border: '1px solid',
+    borderColor: '#ffe81f',
   },
   avatar: {
     color: '#fff',

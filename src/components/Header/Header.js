@@ -6,10 +6,13 @@ import {
   Menu,
   MenuItem,
   IconButton,
+  CardMedia,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { Link } from 'react-router-dom';
+
+import logo from '../../images/Star_Wars_logo.png';
 
 import useStyles from './styles';
 
@@ -28,9 +31,7 @@ const Header = ({ pageTitle, setPageTitle }) => {
   return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="static">
-        <Typography variant="h3" className={classes.headingTitle}>
-          Star Wars
-        </Typography>
+        <img src={logo} className={classes.img} />
         <Toolbar>
           <IconButton
             color="inherit"
@@ -41,7 +42,7 @@ const Header = ({ pageTitle, setPageTitle }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5">{pageTitle}</Typography>
+          <Typography variant="h4">{pageTitle}</Typography>
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}

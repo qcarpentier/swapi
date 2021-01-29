@@ -9,14 +9,17 @@ export default makeStyles({
   },
   card: {
     display: 'flex',
+    color: '#fff',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    backgroundColor: 'rgb(200, 200, 200)',
-    borderRadius: '15px',
+    backgroundColor: 'rgb(40, 40, 40)',
+    borderRadius: '5px',
+    border: '1px solid',
+    borderColor: '#ffe81f',
     height: '100%',
     position: 'relative',
     '&:hover': {
-      backgroundColor: 'rgb(150, 150, 150)',
+      backgroundColor: 'rgb(70, 70, 70)',
     },
   },
   grid: {

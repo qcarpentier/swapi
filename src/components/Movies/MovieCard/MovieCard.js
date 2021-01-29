@@ -4,18 +4,14 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, Typography } from '@material-ui/core/';
 import useStyles from './styles';
 
-const MovieCard = ({ movie: { title, episode_id }, setMovieId }) => {
+const MovieCard = ({ movie: { title, episode_id } }) => {
   const classes = useStyles();
 
   console.log(title);
 
   return (
     <Card className={classes.card}>
-      <Link
-        to={`movies/${episode_id}`}
-        className={classes.link}
-        onClick={() => setMovieId(episode_id)}
-      >
+      <Link to={`movies/${episode_id}`} className={classes.link}>
         <CardContent>
           <Typography
             className={classes.title}
