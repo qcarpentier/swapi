@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   AppBar,
   Toolbar,
@@ -6,7 +6,6 @@ import {
   Menu,
   MenuItem,
   IconButton,
-  CardMedia,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -31,7 +30,9 @@ const Header = ({ pageTitle, setPageTitle }) => {
   return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="static">
-        <img src={logo} className={classes.img} />
+        <Link to="/">
+          <img src={logo} className={classes.img} />
+        </Link>
         <Toolbar>
           <IconButton
             color="inherit"
