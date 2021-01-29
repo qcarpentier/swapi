@@ -34,7 +34,7 @@ const App = () => {
   return (
     <Router>
       <Container maxwidth="lg" className="root">
-        <Header pageTitle={pageTitle} />
+        <Header pageTitle={pageTitle} setPageTitle={setPageTitle} />
 
         <Switch>
           <Route exact path="/">

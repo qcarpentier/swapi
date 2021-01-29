@@ -14,4 +14,8 @@ export default makeStyles(() => ({
   menuButton: {
     color: '000',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 }));
