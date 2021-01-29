@@ -11,7 +11,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
 } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
@@ -43,10 +42,10 @@ const App = () => {
           <Route path="/movies">
             <Movies />
           </Route>
-          <Route path="/people">
+          <Route exact path="/people">
             <People />
           </Route>
-          <Route path="/planets">
+          <Route exact path="/planets">
             <Planets />
           </Route>
         </Switch>

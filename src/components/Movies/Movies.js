@@ -1,21 +1,44 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import MovieCard from "./MovieCard/MovieCard";
-import MovieDetails from "./MovieDetails/MovieDetails";
+import { Grid, CircularProgress } from '@material-ui/core';
 
-import useStyles from "./styles";
+import {
+  Route,
+  Switch,
+  Redirect,
+  useRouteMatch,
+} from 'react-router-dom';
+
+import MovieCard from './MovieCard/MovieCard';
+import MovieDetails from './MovieDetails/MovieDetails';
+
+import useStyles from './styles';
 
 const Movies = () => {
+  const [movieId, setMovieId] = useState();
   const classes = useStyles();
   const movies = useSelector((state) => state.movies);
+  const { url } = useRouteMatch();
 
-  return (
+  return !movies.length ? (
+    <CircularProgress />
+  ) : (
     <>
-      <h2>Movies</h2>
-      {movies.map((movie) => (
-        <p>{movie.title}</p>
-      ))}
+      <Switch>
+        <Route exact path="/movies">
+          <Grid container alignItems="stretch" spacing={3}>
+            {movies.map((movie) => (
+              <Grid key={movie.episode_id} item xs={12} sm={6}>
+                <MovieCard movie={movie} setMovieId={setMovieId} />
+              </Grid>
+            ))}
+          </Grid>
+        </Route>
+        <Route exact path="/movies/:movieId">
+          <MovieDetails movies={movies} />
+        </Route>
+      </Switch>
     </>
   );
 };
